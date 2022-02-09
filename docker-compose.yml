@@ -1,0 +1,4 @@
+dispatcher-base:
+  dockerfile: Dockerfile
+  build: .
+  container_name: "dispatcher-base"

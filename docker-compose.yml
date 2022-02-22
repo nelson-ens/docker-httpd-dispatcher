@@ -1,4 +1,6 @@
-dispatcher-base:
-  dockerfile: Dockerfile
-  build: .
-  container_name: "dispatcher-base"
+version: "2.4"
+
+services:
+  dispatcher:
+    build: .
+    container_name: "dispatcher-base"

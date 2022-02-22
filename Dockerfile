@@ -6,12 +6,10 @@ ARG MODULE_URL
 RUN yum -y update && \
     yum -y install httpd && \
     yum -y install tree && \
-    yum -y install multitail && \
     yum clean all && \
     mv $(curl --insecure --silent ${MODULE_URL} | \
     tar xzvf - --wildcards "*.so" | head -1) /etc/httpd/modules/mod_dispatcher.so && \
-    chown root:root /etc/httpd/modules/mod_dispatcher.so
-    chown apache:apache /mnt/var/www/html
+    chown root:root /etc/httpd/modules/mod_dispatcher.so 
 
 EXPOSE 80
 
